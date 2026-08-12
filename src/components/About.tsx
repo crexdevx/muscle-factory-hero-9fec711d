@@ -119,7 +119,7 @@ export function About() {
                         aria-label={`${m.name} on Instagram`}
                         className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-neutral-200 text-neutral-700 transition-colors hover:border-gold hover:text-gold-deep"
                       >
-                        <Instagram className="h-5 w-5" />
+                        <InstagramIcon className="h-5 w-5" />
                       </a>
                     </div>
                     <p className="mt-5 text-sm leading-relaxed text-neutral-600 sm:text-base">
