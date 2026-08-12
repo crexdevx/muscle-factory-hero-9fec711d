@@ -9,6 +9,7 @@
   --font-body: "Inter", system-ui, sans-serif;
   --color-gold: oklch(0.82 0.16 88);
   --color-gold-deep: oklch(0.68 0.15 78);
+  --color-gold-soft: oklch(0.96 0.04 88);
 }
 
 @utility logo-blend {
