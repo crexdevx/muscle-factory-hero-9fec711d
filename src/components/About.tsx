@@ -59,7 +59,7 @@ export function About() {
           <ul className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-2">
             {team.map((m) => (
               <li key={m.name}>
-                <article className="group h-full overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_10px_40px_-20px_rgba(0,0,0,0.35)] transition-shadow duration-500 hover:shadow-[0_20px_60px_-25px_rgba(0,0,0,0.45)]">
+                <article className="group h-full overflow-hidden rounded-2xl border border-gold/30 bg-gold-soft shadow-[0_10px_40px_-20px_rgba(0,0,0,0.35)] transition-shadow duration-500 hover:shadow-[0_20px_60px_-25px_rgba(0,0,0,0.45)]">
                   <div className="overflow-hidden bg-neutral-950">
                     <img
                       src={m.img}
