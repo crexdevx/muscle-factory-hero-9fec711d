@@ -83,14 +83,13 @@ export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
           />
         </Reveal>
 
-        {/* Middle Left — description */}
-        <Reveal delay={120} className="flex min-h-0 items-end px-4 py-10 md:px-10 md:py-20">
+        {/* Middle Left — bold LEGACY word */}
+        <Reveal delay={120} className="flex min-h-0 items-center justify-center px-4 py-10 md:px-10 md:py-20">
           <p
-            className="max-w-md text-sm leading-relaxed md:text-base"
-            style={{ color: LIGHT_TEXT }}
+            className="font-display text-[11vw] leading-[0.85] font-black uppercase tracking-tight lg:text-[10rem]"
+            style={{ color: TAN_GOLD }}
           >
-            The story of Muscle Factory Gym — the people, the iron and the
-            discipline that built a training culture in Sandheli, Nalbari.
+            Legacy
           </p>
         </Reveal>
 
