@@ -43,7 +43,8 @@ const photos = [
   { src: p3.url, alt: "Muscle Factory Gym members standing together in the studio" },
 ];
 
-export function Legacy() {
+export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
+  const Heading = heading;
   return (
     <section
       id="legacy"
@@ -55,12 +56,12 @@ export function Legacy() {
           <p className="text-[0.65rem] font-black uppercase tracking-[0.45em] text-primary md:text-xs">
             Est. Nalbari
           </p>
-          <h1
+          <Heading
             id="legacy-title"
             className="mt-4 font-display text-[22vw] leading-[0.82] font-black uppercase tracking-tight text-foreground sm:text-[16vw] md:text-[13rem]"
           >
             Legacy
-          </h1>
+          </Heading>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground md:mt-8 md:text-base">
             The story of Muscle Factory Gym — the people, the iron and the discipline that
             built a training culture in Sandheli, Nalbari.
