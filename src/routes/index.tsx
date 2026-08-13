@@ -1,9 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { WhyUs } from "@/components/WhyUs";
 import { About } from "@/components/About";
-import { Legacy } from "@/components/Legacy";
+
 
 const title = "Muscle Factory Gym | Best Gym in Sandheli, Nalbari, Assam";
 const description =
