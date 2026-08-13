@@ -86,7 +86,7 @@ export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
         {/* Middle Left — description */}
         <Reveal delay={120} className="flex min-h-0 items-end px-4 py-10 md:px-10 md:py-20">
           <p
-            className="max-w-md text-xs leading-relaxed md:text-base"
+            className="max-w-md text-sm leading-relaxed md:text-base"
             style={{ color: LIGHT_TEXT }}
           >
             The story of Muscle Factory Gym — the people, the iron and the
