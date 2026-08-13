@@ -1,9 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { WhyUs } from "@/components/WhyUs";
 import { About } from "@/components/About";
-
+import { Legacy } from "@/components/Legacy";
 
 const title = "Muscle Factory Gym | Best Gym in Sandheli, Nalbari, Assam";
 const description =
@@ -48,17 +48,10 @@ function Index() {
     <main className="min-h-screen bg-background font-body">
       <Navbar />
       <Hero />
+      <Legacy heading="h2" />
       <WhyUs />
       <About />
-      <section className="bg-black py-16 text-center md:py-24">
-        <Link
-          to="/legacy"
-          className="font-display text-4xl font-black uppercase tracking-tight text-gold transition-opacity hover:opacity-70 md:text-6xl"
-        >
-          Legacy →
-        </Link>
-      </section>
+
     </main>
   );
 }
-

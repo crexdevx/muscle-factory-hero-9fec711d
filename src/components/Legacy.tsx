@@ -18,7 +18,7 @@ function Reveal({ children, delay = 0 }: { children: ReactNode; delay?: number }
           io.disconnect();
         }
       },
-      { threshold: 0.12 },
+      { threshold: 0.15 },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -29,7 +29,7 @@ function Reveal({ children, delay = 0 }: { children: ReactNode; delay?: number }
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
       className={`transition-all duration-[900ms] ease-out will-change-transform ${
-        shown ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+        shown ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
     >
       {children}
@@ -37,8 +37,8 @@ function Reveal({ children, delay = 0 }: { children: ReactNode; delay?: number }
   );
 }
 
-const stack = [
-  { src: p1.url, alt: "Muscle Factory Gym founder posing on the training floor" },
+const photos = [
+  { src: p1.url, alt: "Muscle Factory Gym athlete posing inside the training floor" },
   { src: p2.url, alt: "Bearded Muscle Factory Gym athlete stretching after a session" },
   { src: p3.url, alt: "Muscle Factory Gym members standing together in the studio" },
 ];
@@ -49,50 +49,92 @@ export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
     <section
       id="legacy"
       aria-labelledby="legacy-title"
-      className="w-full bg-black py-14 md:py-20"
+      className="bg-background py-20 md:py-32"
     >
-      <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 md:px-10">
-        {/* Editorial grid: LEGACY word + 3 stacked photos */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:gap-12">
-          <Reveal>
-            <div className="flex h-full items-center justify-center py-6 md:justify-start md:py-0">
-              <Heading
-                id="legacy-title"
-                className="font-display text-[24vw] leading-[0.8] font-black uppercase tracking-tight text-gold sm:text-[20vw] md:text-[13vw] lg:text-[11rem]"
-              >
-                Legacy
-              </Heading>
-            </div>
-          </Reveal>
+      <div className="mx-auto max-w-6xl px-5 md:px-8">
+        <Reveal>
+          <p className="text-[0.65rem] font-black uppercase tracking-[0.45em] text-primary md:text-xs">
+            Est. Nalbari
+          </p>
+          <Heading
+            id="legacy-title"
+            className="mt-4 font-display text-[22vw] leading-[0.82] font-black uppercase tracking-tight text-foreground sm:text-[16vw] md:text-[13rem]"
+          >
+            Legacy
+          </Heading>
+          <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground md:mt-8 md:text-base">
+            The story of Muscle Factory Gym — the people, the iron and the discipline that
+            built a training culture in Sandheli, Nalbari.
+          </p>
+        </Reveal>
 
-          <div className="flex flex-col gap-2 sm:gap-3">
-            {stack.map((photo, i) => (
-              <Reveal key={photo.src} delay={i * 120}>
+        <div className="mt-14 grid gap-10 md:mt-24 md:grid-cols-12 md:gap-14">
+          <div className="md:col-span-7 md:col-start-1">
+            <Reveal>
+              <figure>
                 <img
-                  src={photo.src}
-                  alt={photo.alt}
+                  src={photos[0]!.src}
+                  alt={photos[0]!.alt}
                   loading="lazy"
-                  className="aspect-[16/10] w-full object-cover md:aspect-[16/9]"
+                  className="w-full object-cover"
                 />
-              </Reveal>
-            ))}
+                <figcaption className="mt-3 text-[0.6rem] uppercase tracking-[0.3em] text-muted-foreground">
+                  01 — The Founder
+                </figcaption>
+              </figure>
+            </Reveal>
+          </div>
+
+          <div className="md:col-span-5 md:col-start-8 md:mt-24">
+            <Reveal delay={100}>
+              <figure>
+                <img
+                  src={photos[1]!.src}
+                  alt={photos[1]!.alt}
+                  loading="lazy"
+                  className="w-full object-cover"
+                />
+                <figcaption className="mt-3 text-[0.6rem] uppercase tracking-[0.3em] text-muted-foreground">
+                  02 — The Discipline
+                </figcaption>
+              </figure>
+            </Reveal>
+          </div>
+
+          <div className="md:col-span-6 md:col-start-4">
+            <Reveal delay={150}>
+              <figure>
+                <img
+                  src={photos[2]!.src}
+                  alt={photos[2]!.alt}
+                  loading="lazy"
+                  className="w-full object-cover"
+                />
+                <figcaption className="mt-3 text-[0.6rem] uppercase tracking-[0.3em] text-muted-foreground">
+                  03 — The Community
+                </figcaption>
+              </figure>
+            </Reveal>
           </div>
         </div>
 
-        {/* Wide 4th photo */}
-        <Reveal delay={80}>
-          <img
-            src={p4.url}
-            alt="Barbell and weight rack on the Muscle Factory Gym training floor"
-            loading="lazy"
-            className="mt-2 aspect-[16/10] w-full object-cover sm:mt-3 md:aspect-[21/9]"
-          />
+        <Reveal>
+          <figure className="mt-14 md:mt-28">
+            <img
+              src={p4.url}
+              alt="Barbell and weight rack on the Muscle Factory Gym training floor"
+              loading="lazy"
+              className="aspect-[16/10] w-full object-cover md:aspect-[21/9]"
+            />
+          </figure>
         </Reveal>
 
-        {/* Date card */}
         <Reveal delay={120}>
-          <div className="mt-2 w-full bg-gold-soft px-4 py-5 text-center sm:mt-3 md:py-8">
-            <p className="font-display text-[11vw] leading-none font-black uppercase tracking-tight text-black sm:text-6xl md:text-7xl lg:text-8xl">
+          <div className="mt-6 w-full bg-gold-soft px-6 py-10 md:mt-8 md:px-14 md:py-16">
+            <p className="text-[0.6rem] uppercase tracking-[0.4em] text-primary-foreground/70">
+              Doors Opened
+            </p>
+            <p className="mt-3 font-display text-5xl leading-[0.9] font-black uppercase tracking-tight text-primary-foreground sm:text-7xl md:text-8xl">
               12 June 2025
             </p>
           </div>
