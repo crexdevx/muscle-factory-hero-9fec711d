@@ -60,83 +60,68 @@ export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
     >
       <div className="grid grid-cols-1 gap-0 md:grid-cols-2">
         {/* Top Left — LEGACY title */}
-        <Reveal>
-          <div className="flex min-h-[260px] items-center justify-center px-6 py-14 md:min-h-0 md:px-10 md:py-20">
-            <Heading
-              id="legacy-title"
-              className="font-display text-[22vw] leading-[0.85] font-black uppercase tracking-tight md:text-[11vw] lg:text-[10rem]"
-              style={{ color: TAN_GOLD }}
-            >
-              Legacy
-            </Heading>
-          </div>
+        <Reveal className="flex min-h-[260px] items-center justify-center px-6 py-14 md:min-h-0 md:px-10 md:py-20">
+          <Heading
+            id="legacy-title"
+            className="font-display text-[22vw] leading-[0.85] font-black uppercase tracking-tight md:text-[11vw] lg:text-[10rem]"
+            style={{ color: TAN_GOLD }}
+          >
+            Legacy
+          </Heading>
         </Reveal>
 
         {/* Top Right — first shirtless man */}
-        <Reveal delay={80}>
-          <div className="relative min-h-[360px] overflow-hidden md:min-h-full">
-            <img
-              src={p1.url}
-              alt="Muscle Factory Gym athlete posing inside the training floor"
-              loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover"
-              style={{ filter: SEPIA_FILTER }}
-            />
-          </div>
+        <Reveal delay={80} className="relative min-h-[360px] overflow-hidden md:min-h-full">
+          <img
+            src={p1.url}
+            alt="Muscle Factory Gym athlete posing inside the training floor"
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{ filter: SEPIA_FILTER }}
+          />
         </Reveal>
 
         {/* Middle Left — description */}
-        <Reveal delay={120}>
-          <div className="flex min-h-[260px] items-end px-6 py-14 md:min-h-0 md:px-10 md:py-20">
-            <p
-              className="max-w-md text-sm leading-relaxed md:text-base"
-              style={{ color: LIGHT_TEXT }}
-            >
-              The story of Muscle Factory Gym — the people, the iron and the
-              discipline that built a training culture in Sandheli, Nalbari.
-            </p>
-          </div>
+        <Reveal delay={120} className="flex min-h-[260px] items-end px-6 py-14 md:min-h-0 md:px-10 md:py-20">
+          <p
+            className="max-w-md text-sm leading-relaxed md:text-base"
+            style={{ color: LIGHT_TEXT }}
+          >
+            The story of Muscle Factory Gym — the people, the iron and the
+            discipline that built a training culture in Sandheli, Nalbari.
+          </p>
         </Reveal>
 
         {/* Middle Right — bearded man */}
-        <Reveal delay={160}>
-          <div className="relative min-h-[360px] overflow-hidden md:min-h-full">
-            <img
-              src={p2.url}
-              alt="Bearded Muscle Factory Gym athlete stretching after a session"
-              loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover"
-              style={{ filter: SEPIA_FILTER }}
-            />
-          </div>
+        <Reveal delay={160} className="relative min-h-[360px] overflow-hidden md:min-h-full">
+          <img
+            src={p2.url}
+            alt="Bearded Muscle Factory Gym athlete stretching after a session"
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{ filter: SEPIA_FILTER }}
+          />
         </Reveal>
 
         {/* Bottom spanning row — weight rack & barbells */}
-        <Reveal delay={200}>
-          <div className="relative col-span-1 min-h-[240px] overflow-hidden md:col-span-2 md:min-h-[360px]">
-            <img
-              src={p4.url}
-              alt="Barbell and weight rack on the Muscle Factory Gym training floor"
-              loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover"
-              style={{ filter: SEPIA_FILTER }}
-            />
-          </div>
+        <Reveal delay={200} className="relative col-span-1 min-h-[240px] overflow-hidden md:col-span-2 md:min-h-[360px]">
+          <img
+            src={p4.url}
+            alt="Barbell and weight rack on the Muscle Factory Gym training floor"
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{ filter: SEPIA_FILTER }}
+          />
         </Reveal>
 
         {/* Footer banner */}
-        <Reveal delay={240}>
-          <div
-            className="col-span-1 flex items-center justify-center px-6 py-8 md:col-span-2 md:py-10"
-            style={{ backgroundColor: TAN_GOLD }}
+        <Reveal delay={240} className="col-span-1 flex items-center justify-center px-6 py-8 md:col-span-2 md:py-10" style={{ backgroundColor: TAN_GOLD }}>
+          <p
+            className="font-display text-3xl font-black uppercase tracking-tight md:text-5xl"
+            style={{ color: BLACK }}
           >
-            <p
-              className="font-display text-3xl font-black uppercase tracking-tight md:text-5xl"
-              style={{ color: BLACK }}
-            >
-              12 June 2025
-            </p>
-          </div>
+            12 June 2025
+          </p>
         </Reveal>
       </div>
     </section>
