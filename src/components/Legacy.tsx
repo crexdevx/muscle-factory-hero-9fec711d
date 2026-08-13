@@ -12,10 +12,12 @@ function Reveal({
   children,
   delay = 0,
   className = "",
+  style,
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
+  style?: React.CSSProperties;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
@@ -39,7 +41,7 @@ function Reveal({
   return (
     <div
       ref={ref}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ transitionDelay: `${delay}ms`, ...style }}
       className={`transition-all duration-[900ms] ease-out will-change-transform ${
         shown ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       } ${className}`}
