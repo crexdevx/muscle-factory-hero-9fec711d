@@ -60,12 +60,12 @@ export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
       className="font-body"
       style={{ backgroundColor: BLACK }}
     >
-      <div className="grid grid-cols-1 gap-0 md:grid-cols-2">
+      <div className="grid grid-cols-2 gap-0">
         {/* Top Left — LEGACY title */}
-        <Reveal className="flex min-h-[260px] items-center justify-center px-6 py-14 md:min-h-0 md:px-10 md:py-20">
+        <Reveal className="flex min-h-0 items-center justify-center px-4 py-10 md:px-10 md:py-20">
           <Heading
             id="legacy-title"
-            className="font-display text-[22vw] leading-[0.85] font-black uppercase tracking-tight md:text-[11vw] lg:text-[10rem]"
+            className="font-display text-[11vw] leading-[0.85] font-black uppercase tracking-tight lg:text-[10rem]"
             style={{ color: TAN_GOLD }}
           >
             Legacy
@@ -73,7 +73,7 @@ export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
         </Reveal>
 
         {/* Top Right — first shirtless man */}
-        <Reveal delay={80} className="relative min-h-[360px] overflow-hidden md:min-h-full">
+        <Reveal delay={80} className="relative min-h-[220px] overflow-hidden md:min-h-full">
           <img
             src={p1.url}
             alt="Muscle Factory Gym athlete posing inside the training floor"
@@ -84,7 +84,7 @@ export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
         </Reveal>
 
         {/* Middle Left — description */}
-        <Reveal delay={120} className="flex min-h-[260px] items-end px-6 py-14 md:min-h-0 md:px-10 md:py-20">
+        <Reveal delay={120} className="flex min-h-0 items-end px-4 py-10 md:px-10 md:py-20">
           <p
             className="max-w-md text-sm leading-relaxed md:text-base"
             style={{ color: LIGHT_TEXT }}
@@ -95,7 +95,7 @@ export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
         </Reveal>
 
         {/* Middle Right — bearded man */}
-        <Reveal delay={160} className="relative min-h-[360px] overflow-hidden md:min-h-full">
+        <Reveal delay={160} className="relative min-h-[220px] overflow-hidden md:min-h-full">
           <img
             src={p2.url}
             alt="Bearded Muscle Factory Gym athlete stretching after a session"
@@ -106,7 +106,7 @@ export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
         </Reveal>
 
         {/* Bottom spanning row — weight rack & barbells */}
-        <Reveal delay={200} className="relative col-span-1 min-h-[240px] overflow-hidden md:col-span-2 md:min-h-[360px]">
+        <Reveal delay={200} className="relative col-span-2 min-h-[180px] overflow-hidden md:min-h-[360px]">
           <img
             src={p4.url}
             alt="Barbell and weight rack on the Muscle Factory Gym training floor"
@@ -117,9 +117,9 @@ export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
         </Reveal>
 
         {/* Footer banner */}
-        <Reveal delay={240} className="col-span-1 flex items-center justify-center px-6 py-8 md:col-span-2 md:py-10" style={{ backgroundColor: TAN_GOLD }}>
+        <Reveal delay={240} className="col-span-2 flex items-center justify-center px-4 py-6 md:py-10" style={{ backgroundColor: TAN_GOLD }}>
           <p
-            className="font-display text-3xl font-black uppercase tracking-tight md:text-5xl"
+            className="font-display text-2xl font-black uppercase tracking-tight md:text-5xl"
             style={{ color: BLACK }}
           >
             12 June 2025
