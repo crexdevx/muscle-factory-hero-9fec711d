@@ -12,8 +12,8 @@ function Reveal({ children, delay = 0 }: { children: ReactNode; delay?: number }
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
           setShown(true);
           io.disconnect();
         }
@@ -72,8 +72,8 @@ export function Legacy() {
             <Reveal>
               <figure>
                 <img
-                  src={photos[0].src}
-                  alt={photos[0].alt}
+                  src={photos[0]!.src}
+                  alt={photos[0]!.alt}
                   loading="lazy"
                   className="w-full object-cover"
                 />
@@ -88,8 +88,8 @@ export function Legacy() {
             <Reveal delay={100}>
               <figure>
                 <img
-                  src={photos[1].src}
-                  alt={photos[1].alt}
+                  src={photos[1]!.src}
+                  alt={photos[1]!.alt}
                   loading="lazy"
                   className="w-full object-cover"
                 />
@@ -104,8 +104,8 @@ export function Legacy() {
             <Reveal delay={150}>
               <figure>
                 <img
-                  src={photos[2].src}
-                  alt={photos[2].alt}
+                  src={photos[2]!.src}
+                  alt={photos[2]!.alt}
                   loading="lazy"
                   className="w-full object-cover"
                 />
