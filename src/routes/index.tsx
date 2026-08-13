@@ -48,10 +48,17 @@ function Index() {
     <main className="min-h-screen bg-background font-body">
       <Navbar />
       <Hero />
-      <Legacy heading="h2" />
       <WhyUs />
       <About />
-
+      <section className="bg-black py-16 text-center md:py-24">
+        <Link
+          to="/legacy"
+          className="font-display text-4xl font-black uppercase tracking-tight text-gold transition-opacity hover:opacity-70 md:text-6xl"
+        >
+          Legacy →
+        </Link>
+      </section>
     </main>
   );
 }
+
