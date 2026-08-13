@@ -8,7 +8,15 @@ const BLACK = "#000000";
 const LIGHT_TEXT = "#e5e5e5";
 const SEPIA_FILTER = "sepia(0.75) saturate(1.3) brightness(0.82) contrast(1.05)";
 
-function Reveal({ children, delay = 0 }: { children: ReactNode; delay?: number }) {
+function Reveal({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
 
@@ -34,7 +42,7 @@ function Reveal({ children, delay = 0 }: { children: ReactNode; delay?: number }
       style={{ transitionDelay: `${delay}ms` }}
       className={`transition-all duration-[900ms] ease-out will-change-transform ${
         shown ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-      }`}
+      } ${className}`}
     >
       {children}
     </div>
