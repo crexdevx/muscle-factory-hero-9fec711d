@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import p1 from "@/assets/IMG-20260813-WA0001.jpg.asset.json";
 import p2 from "@/assets/IMG-20260813-WA0004.jpg.asset.json";
+import p3 from "@/assets/IMG-20260813-WA0003.jpg.asset.json";
 import p4 from "@/assets/IMG-20260813-WA0002.jpg.asset.json";
 
 const TAN_GOLD = "#C4A47C";
@@ -83,14 +84,15 @@ export function Legacy({ heading = "h1" }: { heading?: "h1" | "h2" } = {}) {
           />
         </Reveal>
 
-        {/* Middle Left — bold LEGACY word */}
-        <Reveal delay={120} className="flex min-h-0 items-center justify-center px-4 py-10 md:px-10 md:py-20">
-          <p
-            className="font-display text-[11vw] leading-[0.85] font-black uppercase tracking-tight lg:text-[10rem]"
-            style={{ color: TAN_GOLD }}
-          >
-            Legacy
-          </p>
+        {/* Middle Left — group photo */}
+        <Reveal delay={120} className="relative min-h-[220px] overflow-hidden md:min-h-full">
+          <img
+            src={p3.url}
+            alt="Group of Muscle Factory Gym athletes in the studio"
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{ filter: SEPIA_FILTER }}
+          />
         </Reveal>
 
         {/* Middle Right — bearded man */}
