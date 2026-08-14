@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import p1 from "@/assets/IMG-20260813-WA0001.jpg.asset.json";
 import p2 from "@/assets/IMG-20260813-WA0004.jpg.asset.json";
+import p3 from "@/assets/IMG-20260813-WA0003.jpg.asset.json";
 import p4 from "@/assets/IMG-20260813-WA0002.jpg.asset.json";
 
 const TAN_GOLD = "#C4A47C";
